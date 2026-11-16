@@ -1,0 +1,181 @@
+/* 1. Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdf8f2; 
+    color: #3e2723; 
+    line-height: 1.6;
+}
+
+/* 2. Cabeçalho e Menu de Navegação */
+header {
+    background-color: #5d4037;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav a {
+    color: #fdf8f2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o rato ou na página ativa */
+nav a:hover, nav a.ativo {
+    background-color: #d87a28;
+    color: #ffffff;
+}
+
+/* 3. Conteúdo Principal */
+main {
+    max-width: 800px;
+    margin: 40px auto; /* Centra o conteúdo no ecrã */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #b85d19;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f3e5d8;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+/* 4. Imagem da Padaria */
+img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover; /* Evita que a imagem fique esticada */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 5. Tabela de Horários */
+table {
+    width: 100%;
+
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0d6cc;
+}
+
+th {
+    background-color: #f3e5d8;
+    color: #5d4037;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #faf5f0; /* Destaca a linha ao passar o rato */
+}
+
+/* 6. Formulário de Contacto */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    background-color: #fdf8f2;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #f3e5d8;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #5d4037;
+    font-size: 1rem;
+    /* Obriga "Assunto" e "Mensagem" a começarem numa nova linha */
+    flex-basis: 100%; 
+    margin-bottom: -8px; /* Aproxima o texto da respetiva caixa */
+}
+
+/* Mantém apenas "Nome" e "Telefone" na mesma linha */
+label:nth-of-type(1),
+label:nth-of-type(2) {
+    flex-basis: auto;
+    margin-bottom: 0;
+}
+
+/* Estilo unificado para caixas de texto, seleção e área de mensagem */
+input, select, textarea {
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #3e2723;
+    background-color: #ffffff;
+    border: 1px solid #e0d6cc;
+    border-radius: 5px;
+    outline: none;
+    flex: 1;
+    min-width: 150px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Faz com que o select (Assunto) e a textarea (Mensagem) ocupem a linha toda */
+select, textarea {
+    flex-basis: 100%;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #a1887f;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #d87a28;
+    box-shadow: 0 0 0 3px rgba(216, 122, 40, 0.15);
+}
+
+/* Estilo do botão "Enviar mensagem" */
+button, input[type="submit"] {
+    background-color: #d87a28;
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 0 0 auto;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #b85d19;
+}

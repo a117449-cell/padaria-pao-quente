@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria Pão Quente</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="preco.html">Preços</a>
+            <a href="contactos.html" class="ativo">Contactos</a>
+        </nav>
+    </header>
+    
+    <main>
+    <h2>Contactos da padaria</h2>
+    <p><strong>Email: </strong>silva.paoquente@hotmail.com</p>
+    <p><strong>Telefone: </strong>912 345 678</p>
+    <iframe
+    src="https://www.google.com/maps?q=Escola+Secund%C3%A1ria+de+Gondomar,+Gondomar,+Porto&output=embed"
+    width="738"
+    height="300"
+    style="border:0;"
+    allowfullscreen
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Padaria Pão Quente">
+</iframe>
+    <form id="formContacto" class="reveal" onsubmit="enviarFormulario(event)">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="O teu nome" required>
+        <label for="telefone">Telefone</label>
+        <input type="telefone" id="telefone" name="telefone" placeholder="O teu número" required>
+        <label for="assunto">Assunto</label>
+        <select id="assunto" name="assunto">
+          <option>Pedido</option>
+          <option>Informação</option>
+        </select>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreve aqui a tua mensagem..." required></textarea>
+
+        <button type="submit">Enviar mensagem</button>
+    </form>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
